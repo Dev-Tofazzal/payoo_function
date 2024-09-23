@@ -7,7 +7,15 @@ document.getElementById("addMoney").addEventListener("click",function(event){
         const balance = getTextFieldValueById("accountBalance")
         const newBalance =  balance + addMoney;
         document.getElementById("accountBalance").innerText = newBalance;
+
+        // add to transaction history
+
+        const entry = document.createElement("p");
+        entry.innerText = `Added: ${addMoney} Tk. Balance: ${newBalance}
+         `;
+        console.log(entry);
         
+        document.getElementById("transaction_history").appendChild(entry)
     }
     else{
         alert("failed to add money")
@@ -15,3 +23,5 @@ document.getElementById("addMoney").addEventListener("click",function(event){
     
     
 })
+
+

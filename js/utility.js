@@ -1,14 +1,4 @@
 
-
-// function inputFieldValueById(){
-//     //  console.log("will get value by id");
-
-//      const addMoney = document.getElementById("addMoneyInput").value ;
-//      return addMoney;
-     
-// }
-
-
 function getInputFieldValueById(id){
     const inputValue = document.getElementById(id).value ;
     const inputNumber = parseFloat(inputValue);
@@ -19,4 +9,12 @@ function getTextFieldValueById(id){
     const textValue = document.getElementById(id).innerText;
     const textNumber = parseFloat(textValue);
     return textNumber;
+}
+
+function showSectionById(id){
+    document.getElementById("add_money_form").classList.add("hidden");
+    document.getElementById("cashOut_money_form").classList.add("hidden")
+    document.getElementById("transaction_money_form").classList.add("hidden")
+
+    document.getElementById(id).classList.remove("hidden")
 }
