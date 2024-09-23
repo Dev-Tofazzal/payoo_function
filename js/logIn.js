@@ -10,7 +10,7 @@ document.getElementById("logInBtn").addEventListener("click",function(event){
 
     if(phoneNumber === "5" && pinNumber === "1234"){
         console.log("you are loged in ");
-        window.location.href= "/home.html"
+        window.location.href= "./home.html"
         
     }
     else{
